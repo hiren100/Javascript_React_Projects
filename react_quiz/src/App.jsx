@@ -40,6 +40,9 @@ export default function App() {
     category: "",
     difficulty: "",
   })
+
+  console.log(formData.difficulty)
+
   useEffect(() => {
     fetch(`https://opentdb.com/api.php?amount=10&category=${formData.category}&difficulty=${formData.difficulty}&type=multiple`)
       .then(res => res.json())
